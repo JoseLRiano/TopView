@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="bikerentals.json"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+    <title>Bike Rentals</title>
+</head>
+<body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Bycicle Rentals</h5>  
+        </div>
+        <div class="container p-3">
+        <div class="row d-flex  align-items-sm-center justify-content-center justify-content-sm-center">
+            <div class="col p-3">
+                <div id="bikeOne" class="card" style="width:20rem;">
+                    <img id="img1" class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                          <p id="p1" class="card-text"></p>
+                          <p>$<strong id="price1"></strong></p>
+                          <input onchange="change()" placeholder="0" type="number" id="numberBike1" min="0" step="1" data-bind="value:replyNumber" />
+                    </div>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="card" style="width:20rem;">
+                    <img id="img2" class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                            <p id="p2" class="card-text"></p>
+                            <p>$<strong id="price2"></strong></p>
+                          <input onchange="change()" placeholder="0" type="number" id="numberBike2" min="0" step="1" data-bind="value:replyNumber" />
+                    </div>
+                </div>
+            </div>
+            <div class="col p-3">
+                    <div class="card" style="width:20rem;">
+                        <img id="img3" class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                                <p id="p3" class="card-text"></p>
+                                <p>$<strong id="price3"></strong></p>
+                              <input onchange="change()" placeholder="0" type="number" id="numberBike3" min="0" step="1" data-bind="value:replyNumber" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+        <a id="toggle" href="#multiCollapseExample1" onclick="myToggle()" class="justify-content-sm-center justify-content-center btn btn-primary p-3" role="button"  aria-expanded="false" aria-controls="multiCollapseExample1"> Continue </a>
+        
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="row  d-flex justify-content-center justify-content-sm-center align-items-sm-center">
+                
+                <div class="col p-3">
+                    <div class="card" style="width:20rem;">
+                        <img id="img4" class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                                <p id="p4" class="card-text"></p>
+                                <p>$<strong id="price4"></strong></p>
+                            <input  placeholder="0" type="number" id="AdultHelmet" min="0" step="1" data-bind="value:replyNumber" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-3">
+                <div class="card" style="width:20rem;">
+                    <img id="img5" class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                            <p id="p5" class="card-text"></p>
+                            <p>$<strong id="price5"></strong></p>                          
+                            <input  placeholder="0" type="number" id="kidHelmet" min="0" step="1" data-bind="value:replyNumber" />
+                    </div>
+                </div>
+                </div>
+                <div class="col p-3">
+                        <div class="card" style="width:20rem;">
+                            <img id="img6" class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                    <p id="p6" class="card-text"></p>
+                                    <p>$<strong id="price6"></strong></p>  
+                                    <input placeholder="0" type="number" id="Insurance" min="0" step="1" data-bind="value:replyNumber" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <a href="#" id="checkout" onclick="checkout()" class="justify-content-sm-center justify-content-center btn btn-primary p-3" data-toggle="modal" role="button" > CheckOut </a>
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div id="modal-content" class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container-fluid" id="table">
+                                <!-- <div class="row">
+                                        <div class="col-md-4 col">.col-md-4</div>
+                                        <div class="col-md-4 ml-auto col">.col-md-4 .ml-auto</div>
+                                </div> -->
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button onclick="thanks()" data-dismiss="modal" type="button" class="btn btn-primary" >Pay</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
